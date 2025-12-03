@@ -1,5 +1,2 @@
 upload_channels:
   - sfe1ed40
-
-channels:
-  - https://staging.continuum.io/pbp/fs/kumo-api-feedstock/pr1/bd58f2b

@@ -19,7 +19,7 @@ build:
 requirements:
   build:
     # curl is needed only for downloading whl files in build.sh and bld.bat
-    - curl 8.16.0
+    - curl
   host:
     - pip
     - python
