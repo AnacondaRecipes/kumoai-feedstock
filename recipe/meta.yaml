@@ -7,16 +7,11 @@ package:
 
 build:
   number: 0
-  missing_dso_whitelist:
-    - /lib64/libm.so.6  # [linux and x86_64]
-    - /lib64/libpthread.so.0  # [linux and x86_64]
-    - /lib64/libc.so.6  # [linux and x86_64]
-    - /lib64/ld-linux-x86-64.so.2  # [linux and x86_64]
   skip: true  # [py<310]
 
 requirements:
   build:
-    # curl is needed only for downloading whl files in build.sh
+    # curl is needed only for downloading whl files in build.sh and bld.bat
     - curl 8.16.0
   host:
     - pip
