@@ -7,6 +7,11 @@ package:
 
 build:
   number: 0
+  missing_dso_whitelist:
+    - /lib64/libm.so.6  # [linux and x86_64]
+    - /lib64/libpthread.so.0  # [linux and x86_64]
+    - /lib64/libc.so.6  # [linux and x86_64]
+    - /lib64/ld-linux-x86-64.so.2  # [linux and x86_64]
   skip: true  # [py<310]
 
 requirements:
@@ -28,6 +33,8 @@ requirements:
     - tqdm >=4.66.0
     - urllib3
     - kumo-api ==0.45.0
+    - libgcc-ng  # [linux and x86_64]
+    - libstdcxx-ng  # [linux and x86_64]
 
 # Unable to create some tests example with LLM, needs API TOKEN -> https://kumo-ai.github.io/kumo-sdk/docs/get_started/introduction.html#initializing-the-sdk
 test:
